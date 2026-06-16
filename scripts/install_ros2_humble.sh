@@ -53,7 +53,9 @@ if ! grep -qxF "source /opt/ros/humble/setup.bash" ~/.bashrc; then
   echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 fi
 
+set +u
 source /opt/ros/humble/setup.bash
+set -u
 
 echo
 echo "ROS 2 install complete."
