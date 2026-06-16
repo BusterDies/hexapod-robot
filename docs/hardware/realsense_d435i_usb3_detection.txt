@@ -1,0 +1,44 @@
+=== USB devices ===
+Bus 002 Device 003: ID 8086:0b3a Intel Corp. Intel(R) RealSense(TM) Depth Camera 435i
+Bus 002 Device 002: ID 0bda:0489 Realtek Semiconductor Corp. 4-Port USB 3.0 Hub
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 003: ID 13d3:3549 IMC Networks Bluetooth Radio
+Bus 001 Device 005: ID 17ef:608d Lenovo Optical Mouse
+Bus 001 Device 004: ID 3938:1311  2.4G Wireless Keyboard
+Bus 001 Device 002: ID 0bda:5489 Realtek Semiconductor Corp. 4-Port USB 2.0 Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+=== USB tree / speeds ===
+/:  Bus 02.Port 1: Dev 1, Class=root_hub, Driver=tegra-xusb/4p, 10000M
+    |__ Port 1: Dev 2, If 0, Class=Hub, Driver=hub/4p, 10000M
+    |__ Port 2: Dev 3, If 4, Class=Video, Driver=uvcvideo, 5000M
+    |__ Port 2: Dev 3, If 2, Class=Video, Driver=uvcvideo, 5000M
+    |__ Port 2: Dev 3, If 0, Class=Video, Driver=uvcvideo, 5000M
+    |__ Port 2: Dev 3, If 5, Class=Human Interface Device, Driver=usbhid, 5000M
+    |__ Port 2: Dev 3, If 3, Class=Video, Driver=uvcvideo, 5000M
+    |__ Port 2: Dev 3, If 1, Class=Video, Driver=uvcvideo, 5000M
+/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=tegra-xusb/4p, 480M
+    |__ Port 2: Dev 2, If 0, Class=Hub, Driver=hub/4p, 480M
+        |__ Port 1: Dev 4, If 1, Class=Human Interface Device, Driver=usbhid, 12M
+        |__ Port 1: Dev 4, If 0, Class=Human Interface Device, Driver=usbhid, 12M
+        |__ Port 3: Dev 5, If 0, Class=Human Interface Device, Driver=usbhid, 1.5M
+    |__ Port 3: Dev 3, If 0, Class=Wireless, Driver=rtk_btusb, 12M
+    |__ Port 3: Dev 3, If 1, Class=Wireless, Driver=rtk_btusb, 12M
+
+=== Video devices ===
+NVIDIA Tegra Video Input Device (platform:tegra-camrtc-ca):
+	/dev/media0
+
+Intel(R) RealSense(TM) Depth Ca (usb-3610000.usb-2):
+	/dev/video0
+	/dev/video1
+	/dev/video2
+	/dev/video3
+	/dev/video4
+	/dev/video5
+	/dev/media1
+	/dev/media2
+
+
+=== ROS environment ===
+ROS_DISTRO=humble
