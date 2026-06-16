@@ -427,3 +427,40 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# ROS 2 build outputs
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# VS Code / editors
+.vscode/
+.idea/
+
+# ROS bags and recordings
+*.bag
+*.db3
+*.mcap
+bags/
+rosbags/
+recordings/
+
+# Large model files
+*.engine
+*.onnx
+*.pt
+*.pth
+*.tflite
+
+# Secrets
+.env
+*.pem
+*.key
+id_rsa*
+id_ed25519*
